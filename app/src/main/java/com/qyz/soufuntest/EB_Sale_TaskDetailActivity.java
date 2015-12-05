@@ -14,10 +14,15 @@ public class EB_Sale_TaskDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_eb_sale_task_detail);
-        setTitle("任务签到");
+
+        String state = getIntent().getStringExtra("state");
+        if ("1".equals(state)) {
+            setTitle("任务签到");
+        } else if ("2".equals(state)) {
+            setTitle("任务明细");
+        }
+
     }
 
 }

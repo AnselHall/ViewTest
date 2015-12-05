@@ -46,6 +46,8 @@ public class EB_Sale_MyAttendanceActivity extends AppCompatActivity {
     private ImageView work_iv_item_reason;
     private ImageView workoff_iv_item_reason;
 
+    private static String STATE = "1";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,6 +116,7 @@ public class EB_Sale_MyAttendanceActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(EB_Sale_MyAttendanceActivity.this,EB_Sale_TaskDetailActivity.class);
+                    intent.putExtra("state", STATE);
                     startActivity(intent);
 
                 }
